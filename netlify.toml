@@ -1,6 +1,6 @@
 # This is the original rule we want to work
 [[headers]]
-  for = "/.well-known/assetlinks.json"
+  for = "/assetlinks.json" # <-- REMOVED .well-known
   [headers.values]
     Content-Type = "application/json"
 
