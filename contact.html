@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Wimbli</title>
+    <meta
+      name="description"
+      content="Get in touch with the Wimbli team for support, feedback, or inquiries."
+    />
+
+    <meta name="color-scheme" content="light" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Contact Wimbli" />
+    <meta
+      property="og:description"
+      content="Get in touch with the Wimbli team."
+    />
+    <meta
+      property="og:image"
+      content="https://storage.googleapis.com/gemini-prod-us-west1-assets/wimbli_og_image.png"
+    />
+    <meta property="og:url" content="https://wimbli.app/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      :root {
+        color-scheme: light;
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TBSKPMC0ML");
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Header & Navigation -->
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md"
+    >
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="/wimbli-icon-bg.png" alt="Wimbli logo" class="h-10 w-10" />
+          <span class="text-2xl font-bold text-slate-900">Wimbli</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a
+            href="index.html#how-it-works"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >FAQ</a
+          >
+          <a href="contact.html" class="text-teal-500 font-semibold">Contact</a>
+          <div class="flex items-center space-x-3">
+            <a
+              href="https://apps.apple.com/us/app/wimbli/id6747738220"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                class="h-[42px] w-auto transition-transform duration-200 hover:scale-105"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                class="h-[62px] w-auto transition-transform duration-200 hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-slate-800 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              id="icon-menu"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden"
+              id="icon-close"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+        >
+          <a
+            href="index.html#how-it-works"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="block text-teal-500 font-semibold px-3 py-2 rounded-md text-base"
+            >Contact</a
+          >
+          <div class="mt-4 flex flex-col items-center space-y-3 w-full px-4">
+            <a
+              href="https://apps.apple.com/us/app/wimbli/id6747738220"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              class="block w-full max-w-[175px] transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                class="w-full h-auto"
+              />
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+              class="block w-full max-w-[200px] transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Contact Section -->
+      <section class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10"
+          >
+            <div class="lg:pt-4">
+              <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Get in Touch
+              </h2>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                We'd love to hear from you! Whether you have a question about
+                features, feedback to share, or anything else, our team is ready
+                to answer all your questions.
+              </p>
+              <div class="mt-10 space-y-6">
+                <div class="flex gap-x-4">
+                  <div
+                    class="h-10 w-10 flex-none flex items-center justify-center rounded-lg bg-indigo-50"
+                  >
+                    <svg
+                      class="h-6 w-6 text-teal-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">Support Email</h3>
+                    <p class="mt-1 text-gray-600">
+                      For general inquiries and support
+                    </p>
+                    <a
+                      href="mailto:wimbliapp@gmail.com"
+                      class="mt-2 font-semibold text-teal-500 hover:text-teal-400"
+                      >wimbliapp@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <label
+                  for="full-name"
+                  class="block text-sm font-semibold leading-6 text-gray-900"
+                  >Full name</label
+                >
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="full-name"
+                    id="full-name"
+                    autocomplete="name"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-semibold leading-6 text-gray-900"
+                  >Email</label
+                >
+                <div class="mt-2.5">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-semibold leading-6 text-gray-900"
+                  >Message</label
+                >
+                <div class="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="4"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="mt-8 flex justify-end">
+                <button
+                  type="submit"
+                  class="w-full rounded-md bg-teal-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                >
+                  Send message
+                </button>
+              </div>
+            </form>
+            <div
+              id="form-feedback"
+              class="mt-6 text-center text-lg font-medium"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400">
+      <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <p class="font-semibold text-white">Built by Oscasavia Birungi</p>
+            <p class="text-sm">
+              &copy; <span id="current-year"></span> Wimbli. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a href="faq.html" class="hover:text-white transition-colors"
+              >FAQ</a
+            >
+            <span class="text-slate-500">&bull;</span>
+            <a
+              href="/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <span class="text-slate-500">&bull;</span>
+            <a
+              href="/terms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- Mobile Menu Logic ---
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconMenu = document.getElementById("icon-menu");
+        const iconClose = document.getElementById("icon-close");
+
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          iconMenu.classList.toggle("hidden");
+          iconClose.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            iconMenu.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+          });
+        });
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        // --- UPDATED: Contact Form Logic ---
+        const contactForm = document.querySelector("form");
+        const feedbackDiv = document.getElementById("form-feedback"); // Get the feedback div
+
+        contactForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+          );
+          const originalButtonText = submitButton.innerHTML;
+          submitButton.innerHTML = "Sending...";
+          submitButton.disabled = true;
+          feedbackDiv.innerHTML = ""; // Clear previous messages
+
+          const formData = new FormData(contactForm);
+          const name = formData.get("full-name");
+          const email = formData.get("email");
+          const message = formData.get("message");
+
+          if (!name || !email || !message) {
+            // Change #1: Replaced alert with innerHTML
+            feedbackDiv.innerHTML =
+              '<p class="text-red-600">Please fill out all fields.</p>';
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+            return;
+          }
+
+          try {
+            const response = await fetch("/.netlify/functions/contact", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, message }),
+            });
+
+            if (response.ok) {
+              // Change #2: Replaced alert with innerHTML
+              feedbackDiv.innerHTML =
+                '<p class="text-green-600">✅ Thanks for your message! We will get back to you shortly.</p>';
+              contactForm.reset();
+            } else {
+              const data = await response.json();
+              // Change #3: Replaced alert with innerHTML
+              feedbackDiv.innerHTML =
+                '<p class="text-red-600">❌ Error: ' +
+                (data.error || "Something went wrong.") +
+                "</p>";
+            }
+          } catch (err) {
+            console.error(err);
+            // Change #4: Replaced alert with innerHTML
+            feedbackDiv.innerHTML =
+              '<p class="text-red-600">❌ Network error. Please try again.</p>';
+          } finally {
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

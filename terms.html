@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service – Wimbli</title>
+    <meta
+      name="description"
+      content="Terms and Conditions for the use of the Wimbli mobile application and related services."
+    />
+
+    <meta name="color-scheme" content="light" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Wimbli Terms of Service" />
+    <meta
+      property="og:description"
+      content="Read the terms and conditions for using Wimbli."
+    />
+    <meta
+      property="og:image"
+      content="https://storage.googleapis.com/gemini-prod-us-west1-assets/wimbli_og_image.png"
+    />
+    <meta property="og:url" content="https://wimbli.app/terms.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      :root {
+        color-scheme: light;
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TBSKPMC0ML");
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Header & Navigation -->
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md"
+    >
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="/wimbli-icon-bg.png" alt="Wimbli logo" class="h-10 w-10" />
+          <span class="text-2xl font-bold text-slate-900">Wimbli</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a
+            href="index.html#how-it-works"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="text-slate-600 hover:text-teal-500 transition-colors"
+            >Contact</a
+          >
+          <div class="flex items-center space-x-3">
+            <a
+              href="https://apps.apple.com/us/app/wimbli/id6747738220"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                class="h-[42px] w-auto transition-transform duration-200 hover:scale-105"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                class="h-[62px] w-auto transition-transform duration-200 hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-slate-800 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              id="icon-menu"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden"
+              id="icon-close"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+        >
+          <a
+            href="index.html#how-it-works"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+          <div class="mt-4 flex flex-col items-center space-y-3 w-full px-4">
+            <a
+              href="https://apps.apple.com/us/app/wimbli/id6747738220"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              class="block w-full max-w-[175px] transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                class="w-full h-auto"
+              />
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+              class="block w-full max-w-[200px] transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Terms and Conditions Content -->
+      <section class="bg-white pt-32 pb-24 sm:pt-40 sm:pb-32">
+        <div class="mx-auto max-w-4xl px-6 lg:px-8 prose lg:prose-lg">
+          <div class="max-w-3xl">
+            <p class="text-base font-semibold leading-7 text-teal-500">
+              Effective Date: May 17, 2025
+            </p>
+            <h1
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Terms and Conditions
+            </h1>
+            <p class="mt-6 text-xl leading-8 text-gray-700">
+              Welcome to Wimbli. These Terms and Conditions ("Terms") govern
+              your access to and use of the Wimbli mobile application (the
+              "App") and its related services.
+            </p>
+          </div>
+
+          <div class="mt-16 text-gray-600 space-y-8">
+            <h2>1. Eligibility</h2>
+            <p>
+              You must be at least 13 years old (or the minimum age required in
+              your jurisdiction to use social media applications) to use the
+              App. By creating an account and using the App, you represent and
+              warrant that you meet this age requirement.
+            </p>
+
+            <h2>2. User Accounts</h2>
+            <p>
+              To access most features of the App, you must register for an
+              account. You agree to:
+            </p>
+            <ul>
+              <li>
+                Provide accurate, current, and complete information during the
+                registration process.
+              </li>
+              <li>
+                Maintain the security of your password and accept all risks of
+                unauthorized access to your account.
+              </li>
+              <li>
+                Promptly notify us if you discover or otherwise suspect any
+                security breaches related to the App.
+              </li>
+            </ul>
+            <p>
+              You are responsible for all activities that occur under your
+              account. You may delete your account at any time through the App's
+              settings.
+            </p>
+
+            <h2>3. Acceptable Use Policy</h2>
+            <p>
+              You agree not to use the App to post, upload, transmit, or share
+              content that:
+            </p>
+            <ul>
+              <li>
+                Violates any local, state, national, or international law or
+                regulation.
+              </li>
+              <li>
+                Is unlawful, libelous, defamatory, obscene, pornographic,
+                indecent, lewd, suggestive, harassing, threatening, invasive of
+                privacy or publicity rights, abusive, inflammatory, or
+                fraudulent.
+              </li>
+              <li>
+                Impersonates any person or entity or otherwise misrepresents
+                your affiliation with a person or entity.
+              </li>
+              <li>
+                Contains any unsolicited promotions, political campaigning,
+                advertising, or solicitations.
+              </li>
+              <li>
+                Contains any private information of any third party without
+                their explicit consent.
+              </li>
+              <li>
+                Is intended to interfere with the operation of the App,
+                including deploying viruses or attempting to gain unauthorized
+                access to our systems.
+              </li>
+            </ul>
+            <p>
+              We reserve the right to suspend or terminate your account without
+              notice if you violate these rules.
+            </p>
+
+            <h2>4. User-Generated Content</h2>
+            <p>
+              You retain all ownership rights to the content you post on Wimbli,
+              including event listings, messages, and profile information ("User
+              Content"). By submitting User Content, you grant Wimbli a
+              worldwide, non-exclusive, royalty-free, sublicensable, and
+              transferable license to use, reproduce, display, and distribute
+              your User Content in connection with the Service. This license is
+              solely for the purpose of operating, promoting, and improving the
+              App.
+            </p>
+
+            <h2>5. Our Intellectual Property</h2>
+            <p>
+              The App and its original content (excluding User Content),
+              features, and functionality are and will remain the exclusive
+              property of Wimbli and its licensors. Our trademarks and trade
+              dress may not be used in connection with any product or service
+              without our prior written consent.
+            </p>
+
+            <h2>6. Termination</h2>
+            <p>
+              We may terminate or suspend your account and bar access to the
+              Service immediately, without prior notice or liability, for any
+              reason whatsoever, including without limitation if you breach the
+              Terms.
+            </p>
+
+            <h2>7. Disclaimers and Limitation of Liability</h2>
+            <p>
+              The Service is provided on an "AS IS" and "AS AVAILABLE" basis. We
+              make no warranties, express or implied, regarding the operation or
+              availability of the App. To the fullest extent permissible by law,
+              Wimbli disclaims all warranties, express or implied, in connection
+              with the Service and your use thereof.
+            </p>
+            <p>
+              In no event shall Wimbli, nor its directors, employees, partners,
+              agents, suppliers, or affiliates, be liable for any indirect,
+              incidental, special, consequential, or punitive damages arising
+              out of your use of, or inability to use, the App.
+            </p>
+
+            <h2>8. Changes to Terms</h2>
+            <p>
+              We reserve the right, at our sole discretion, to modify or replace
+              these Terms at any time. If a revision is material, we will
+              provide at least 30 days' notice prior to any new terms taking
+              effect. By continuing to access or use our Service after any
+              revisions become effective, you agree to be bound by the revised
+              terms.
+            </p>
+
+            <h2>9. Governing Law</h2>
+            <p>
+              These Terms shall be governed and construed in accordance with the
+              laws of the State of Illinois, United States, without regard to
+              its conflict of law provisions.
+            </p>
+
+            <h2>10. Contact Us</h2>
+            <p>
+              If you have any questions about these Terms, please contact us at:
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a
+                href="mailto:wimbliapp@gmail.com"
+                class="text-teal-500 hover:text-teal-700"
+                >wimbliapp@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400">
+      <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <p class="font-semibold text-white">Built by Oscasavia Birungi</p>
+            <p class="text-sm">
+              &copy; <span id="current-year"></span> Wimbli. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a href="faq.html" class="hover:text-white transition-colors"
+              >FAQ</a
+            >
+            <span class="text-slate-500">&bull;</span>
+            <a
+              href="/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <span class="text-slate-500">&bull;</span>
+            <a
+              href="#"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconMenu = document.getElementById("icon-menu");
+        const iconClose = document.getElementById("icon-close");
+
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          iconMenu.classList.toggle("hidden");
+          iconClose.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            iconMenu.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+          });
+        });
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# .gitignore
+
+# Ignore environment variables
+.env
+
+# Ignore node modules
+node_modules
+# Local Netlify folder
+.netlify

@@ -1,0 +1,11 @@
+# This is the original rule we want to work
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+# This is a new rule for testing purposes
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    X-Test-Header = "Hello from Netlify!"
