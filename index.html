@@ -9,7 +9,7 @@
       content="Wimbli – Discover hyper-local, spontaneous experiences and real-world connections based on your interests and location."
     />
 
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="dark" />
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Wimbli" />
@@ -21,37 +21,88 @@
     <meta property="og:url" content="https://wimbli.app" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- Favicon (using new logo) -->
+    <link rel="icon" href="/wimbliAppIcon.png" type="image/png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Poppins for consistency) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* Custom styles for smooth scrolling and font */
       body {
-        font-family: "Inter", sans-serif;
-        background-color: #f8fafc; /* Light gray background */
+        font-family: "Poppins", sans-serif;
+        background-color: #020617; /* Even darker slate for more contrast */
+        color: #e2e8f0;
+      }
+      :root {
+        color-scheme: dark;
       }
       .gradient-text {
-        background: linear-gradient(90deg, #4055a9, #2fe5dc);
+        background: linear-gradient(90deg, #a78bfa, #38bdf8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      .animate-bounce {
-        animation: bounce 1s infinite;
+      .hero-gradient {
+        background: radial-gradient(
+          ellipse 80% 50% at 50% -20%,
+          rgba(56, 189, 248, 0.15),
+          transparent
+        ),
+        radial-gradient(
+          ellipse 80% 50% at 50% 120%,
+          rgba(129, 140, 248, 0.15),
+          transparent
+        ),
+        #020617;
       }
-      :root {
-        color-scheme: light;
+      
+      /* --- ANIMATIONS --- */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+        opacity: 0; /* Start hidden */
+      }
+
+      /* Staggered animation delay */
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+      .delay-400 { animation-delay: 0.4s; }
+      .delay-500 { animation-delay: 0.5s; }
+
+      /* Nav link underline animation */
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: linear-gradient(90deg, #a78bfa, #38bdf8);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-link:hover {
+        color: white;
+      }
+
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -65,51 +116,34 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-TBSKPMC0ML");
     </script>
   </head>
-  <body class="bg-slate-50 text-slate-800">
+  <body class="bg-slate-950 text-slate-200">
     <!-- Header & Navigation -->
     <header
       id="header"
-      class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md"
+      class="bg-slate-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <nav
         class="container mx-auto px-6 py-3 flex justify-between items-center"
       >
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="/wimbli-icon-bg.png" alt="Wimbli logo" class="h-10 w-10" />
-          <span class="text-2xl font-bold text-slate-900">Wimbli</span>
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-10 w-10" />
+          <span class="text-2xl font-bold text-white">Wimbli</span>
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-6">
-          <a
-            href="index.html#how-it-works"
-            class="text-slate-600 hover:text-teal-500 transition-colors"
-            >How It Works</a
-          >
-          <a
-            href="features.html"
-            class="text-slate-600 hover:text-teal-500 transition-colors"
-            >Features</a
-          >
-          <a
-            href="faq.html"
-            class="text-slate-600 hover:text-teal-500 transition-colors"
-            >FAQ</a
-          >
-          <a
-            href="contact.html"
-            class="text-slate-600 hover:text-teal-500 transition-colors"
-            >Contact</a
-          >
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html#how-it-works" class="nav-link text-slate-300">How It Works</a>
+          <a href="features.html" class="nav-link text-slate-300">Features</a>
+          <a href="faq.html" class="nav-link text-slate-300">FAQ</a>
+          <a href="contact.html" class="nav-link text-slate-300">Contact</a>
           <a
             href="#download"
-            class="bg-teal-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-600 transition-all shadow-sm"
+            class="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 transform hover:scale-105"
           >
-            Download
+            Download Now
           </a>
         </div>
 
@@ -117,280 +151,118 @@
         <div class="md:hidden">
           <button
             id="mobile-menu-button"
-            class="text-slate-800 focus:outline-none"
+            class="text-slate-200 focus:outline-none"
           >
-            <svg
-              class="w-6 h-6"
-              id="icon-menu"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
+            <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
-            <svg
-              class="w-6 h-6 hidden"
-              id="icon-close"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
       </nav>
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden">
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-900">
         <div
           class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
         >
-          <a
-            href="index.html#how-it-works"
-            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
-            >How It Works</a
-          >
-          <a
-            href="features.html"
-            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
-            >Features</a
-          >
-          <a
-            href="faq.html"
-            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
-            >FAQ</a
-          >
-          <a
-            href="contact.html"
-            class="block text-slate-600 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
-            >Contact</a
-          >
-          <a
-            href="#download"
-            class="mt-4 w-full text-center bg-teal-500 text-white font-semibold px-5 py-3 rounded-lg hover:bg-teal-600 transition-all shadow-sm"
-          >
-            Download
-          </a>
+          <a href="index.html#how-it-works" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+          <a href="features.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Features</a>
+          <a href="faq.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+          <a href="contact.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          <a href="#download" class="mt-4 w-1/2 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition-all shadow-sm">Download</a>
         </div>
       </div>
     </header>
 
     <main>
       <!-- Hero Section -->
-      <section class="pt-32 pb-20 md:pt-48 md:pb-32 text-center bg-white">
+      <section class="hero-gradient pt-32 pb-20 md:pt-48 md:pb-32 text-center overflow-hidden">
         <div class="container mx-auto px-6">
-          <h1 class="text-5xl md:text-7xl font-extrabold mb-4 gradient-text">
-            Wimbli
+          <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white fade-in delay-100">
+            Stop scrolling. <span class="gradient-text">Start living.</span>
           </h1>
-          <p class="text-2xl md:text-3xl font-light text-slate-700 mb-6">
-            Stop scrolling. <span class="font-semibold">Start living.</span>
+          <p class="max-w-3xl mx-auto text-lg text-slate-300 mb-10 fade-in delay-200">
+            Wimbli is your portal to spontaneous, hyper-local experiences. Discover real-world connections with people who share your vibe, right now.
           </p>
-          <p class="max-w-3xl mx-auto text-lg text-slate-500 mb-10">
-            Discover spontaneous, hyper-local experiences and build real-world
-            connections with people who share your vibe.
-          </p>
-          <!-- App Store + Google Play Badges -->
           <div
-            class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+            class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 fade-in delay-300"
           >
-            <a
-              href="https://apps.apple.com/us/app/wimbli/id6747738220"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transform hover:scale-105 transition-transform max-w-[175px] w-full"
-            >
-              <img
-                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-                alt="Download on the App Store"
-                class="w-full h-auto"
-              />
+             <a href="https://apps.apple.com/us/app/wimbli/id6747738220" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition-transform">
+              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" onerror="this.onerror=null;this.src='https://placehold.co/175x58/000000/FFFFFF?text=App+Store';" alt="Download on the App Store" class="h-14" />
             </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transform hover:scale-105 transition-transform max-w-[220px] w-full"
-            >
-              <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                alt="Get it on Google Play"
-                class="w-full h-auto"
-              />
+            <a href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition-transform">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" onerror="this.onerror=null;this.src='https://placehold.co/175x58/000000/FFFFFF?text=Google+Play';" alt="Get it on Google Play" class="h-14" />
             </a>
           </div>
+          
+          <!-- Phone Mockup -->
+          <div class="relative mt-16 max-w-lg mx-auto fade-in delay-400">
+            <div class="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-3xl blur-xl opacity-50 animate-pulse"></div>
+            <img src="https://placehold.co/300x600/1e293b/e2e8f0?text=Your+App+Screenshot" alt="Wimbli app screenshot" class="relative rounded-3xl shadow-2xl mx-auto" />
+          </div>
 
-          <!-- Demo CTA -->
-          <a
-            href="#demo-video"
-            class="inline-block text-teal-500 font-semibold hover:text-teal-700 transition-colors animate-bounce"
-          >
-            Watch Demo ↓
-          </a>
         </div>
       </section>
 
       <!-- How It Works Section -->
-      <section id="how-it-works" class="py-20 bg-slate-50">
+      <section id="how-it-works" class="py-20 bg-slate-950">
         <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12">How Wimbli Works</h2>
-          <div class="grid md:grid-cols-3 gap-10 text-center">
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <div
-                class="bg-indigo-100 text-teal-500 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
+          <h2 class="text-4xl font-bold text-center mb-12 text-white">Find Your Vibe in 3 Steps</h2>
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <!-- Step 1 -->
+            <div class="bg-slate-900 p-8 rounded-2xl shadow-lg border border-slate-800 transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3">1. Share Your Vibe</h3>
-              <p class="text-slate-500">
-                Quickly set up your profile with interests that define you—from
-                coding workshops to spontaneous park jams.
+              <h3 class="text-xl font-semibold mb-3 text-white">1. Share Your Vibe</h3>
+              <p class="text-slate-400">
+                Set your interests, from coding workshops to spontaneous park jams, and let us find your scene.
               </p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <div
-                class="bg-indigo-100 text-teal-500 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
+            <!-- Step 2 -->
+            <div class="bg-slate-900 p-8 rounded-2xl shadow-lg border border-slate-800 transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3">
-                2. Discover Local & Live
-              </h3>
-              <p class="text-slate-500">
-                Explore a real-time feed of events and activities happening near
-                you, filtered by what you love and how far you'll go.
+              <h3 class="text-xl font-semibold mb-3 text-white">2. Discover What's Live</h3>
+              <p class="text-slate-400">
+                Explore a real-time feed of events happening near you, filtered by what you love.
               </p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <div
-                class="bg-indigo-100 text-teal-500 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                  />
+            <!-- Step 3 -->
+            <div class="bg-slate-900 p-8 rounded-2xl shadow-lg border border-slate-800 transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3">
-                3. Connect & Experience
-              </h3>
-              <p class="text-slate-500">
-                Join event group chats, coordinate with attendees, and dive into
-                new experiences. Post your own spontaneous happenings too!
+              <h3 class="text-xl font-semibold mb-3 text-white">3. Connect & Experience</h3>
+              <p class="text-slate-400">
+                Join event chats, meet like-minded people, and dive into new experiences.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Features Section (Summary) -->
-      <section id="features" class="py-20 bg-white">
+      <!-- Video Section -->
+      <section id="demo-video" class="py-20 bg-slate-900">
         <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            Why You'll Love Wimbli
-          </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-slate-50 p-6 rounded-lg">
-              <h3 class="text-lg font-bold mb-2">Spontaneous Event Feed</h3>
-              <p class="text-slate-600">
-                Discover "happening now" events and last-minute meetups you'd
-                otherwise miss.
-              </p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-lg">
-              <h3 class="text-lg font-bold mb-2">Hyper-Local Discovery</h3>
-              <p class="text-slate-600">
-                Find activities based on your precise location, from 1 mile to
-                further afield.
-              </p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-lg">
-              <h3 class="text-lg font-bold mb-2">Event Group Chats</h3>
-              <p class="text-slate-600">
-                Connect with attendees, ask questions, and coordinate before the
-                event.
-              </p>
-            </div>
-          </div>
-          <div class="text-center mt-12">
-            <a
-              href="features.html"
-              class="text-teal-500 font-semibold hover:text-teal-700 transition-colors"
-            >
-              See All Features &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Demo Video Section -->
-      <section id="demo-video" class="py-20 bg-slate-50">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-4">
-            See Wimbli in Action
-          </h2>
-          <p class="text-lg text-slate-600 text-center mb-10 max-w-2xl mx-auto">
-            Watch a quick walkthrough of how Wimbli helps you discover and
-            connect.
+          <h2 class="text-4xl font-bold text-center mb-4 text-white">See Wimbli in Action</h2>
+          <p class="text-lg text-slate-400 text-center mb-10 max-w-2xl mx-auto">
+            Watch a quick walkthrough of how Wimbli helps you discover and connect.
           </p>
-          <div
-            class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl"
-            style="padding-top: 56.25%"
-          >
+          <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl shadow-blue-500/20 border border-slate-800" style="padding-top: 56.25%">
             <iframe
-              class="absolute top-0 left-0 w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/SJ2fGNzTI0M?rel=0"
+              class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/SJ2fGNzTI0M?rel=0&autoplay=1&mute=1&loop=1&playlist=SJ2fGNzTI0M"
               title="Wimbli Demo"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -399,96 +271,106 @@
           </div>
         </div>
       </section>
+      
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-slate-950">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12 text-white">Why You'll Love Wimbli</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
+              <h3 class="text-lg font-bold mb-2 text-white">Spontaneous Event Feed</h3>
+              <p class="text-slate-400">Discover "happening now" events and last-minute meetups you'd otherwise miss.</p>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
+              <h3 class="text-lg font-bold mb-2 text-white">Hyper-Local Discovery</h3>
+              <p class="text-slate-400">Find activities based on your precise location, from 1 mile to further afield.</p>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800">
+              <h3 class="text-lg font-bold mb-2 text-white">Event Group Chats</h3>
+              <p class="text-slate-400">Connect with attendees, ask questions, and coordinate before the event.</p>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a href="features.html" class="nav-link text-slate-300 font-semibold">
+              See All Features
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <!-- CTA Section -->
-      <section id="download" class="bg-white">
+       <!-- CTA Section -->
+      <section id="download" class="hero-gradient">
         <div class="container mx-auto px-6 py-20 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Start Your Adventure Today
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to Live Spontaneously?
           </h2>
-          <p class="text-slate-600 max-w-2xl mx-auto mb-8">
+          <p class="text-slate-300 max-w-2xl mx-auto mb-8">
             Download Wimbli now and discover a world of spontaneous connections
             right at your fingertips. Available on iOS and Android.
           </p>
           <div
             class="flex flex-col sm:flex-row justify-center items-center gap-4"
           >
-            <a
-              href="https://apps.apple.com/us/app/wimbli/id6747738220"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transform hover:scale-105 transition-transform max-w-[175px] w-full"
-            >
-              <img
-                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-                alt="Download on the App Store"
-                class="w-full h-auto"
-              />
+            <a href="https://apps.apple.com/us/app/wimbli/id6747738220" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition-transform">
+              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" onerror="this.onerror=null;this.src='https://placehold.co/175x58/000000/FFFFFF?text=App+Store';" alt="Download on the App Store" class="h-14" />
             </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transform hover:scale-105 transition-transform max-w-[220px] w-full"
-            >
-              <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                alt="Get it on Google Play"
-                class="w-full h-auto"
-              />
+            <a href="https://play.google.com/store/apps/details?id=com.oscasavia.wimbli" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition-transform">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" onerror="this.onerror=null;this.src='https://placehold.co/175x58/000000/FFFFFF?text=Google+Play';" alt="Get it on Google Play" class="h-14" />
             </a>
           </div>
         </div>
       </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400">
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800">
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-center md:text-left mb-4 md:mb-0">
-            <p class="font-semibold text-white">Built by Oscasavia Birungi</p>
+             <div class="flex items-center space-x-3 justify-center md:justify-start mb-2">
+                <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-8 w-8" />
+                <span class="text-xl font-bold text-white">Wimbli</span>
+             </div>
             <p class="text-sm">
               &copy; <span id="current-year"></span> Wimbli. All rights
               reserved.
             </p>
           </div>
           <div class="flex items-center space-x-4">
-            <a href="faq.html" class="hover:text-white transition-colors"
-              >FAQ</a
-            >
-            <span class="text-slate-500">&bull;</span>
-            <a
-              href="/privacy.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-white transition-colors"
-              >Privacy Policy</a
-            >
-            <span class="text-slate-500">&bull;</span>
-            <a
-              href="/terms.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-white transition-colors"
-              >Terms of Service</a
-            >
+            <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+            <span class="text-slate-600">•</span>
+            <a href="/privacy.html" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Privacy</a>
+            <span class="text-slate-600">•</span>
+            <a href="/terms.html" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Terms</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Menu functionality -->
+    <!-- Scripts -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+          observer.observe(el);
+        });
+
+
         const header = document.getElementById("header");
         window.addEventListener("scroll", function () {
-          if (window.scrollY > 50) {
-            header.classList.add("py-2", "shadow-xl");
-            header.classList.remove("py-3");
+          if (window.scrollY > 20) {
+            header.classList.add("shadow-lg", "border-b", "border-slate-800");
           } else {
-            header.classList.remove("py-2", "shadow-xl");
-            header.classList.add("py-3");
+            header.classList.remove("shadow-lg", "border-b", "border-slate-800");
           }
         });
 
@@ -503,90 +385,18 @@
           iconClose.classList.toggle("hidden");
         });
 
-        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        document.querySelectorAll("#mobile-menu a, nav a").forEach((link) => {
           link.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-            iconMenu.classList.remove("hidden");
-            iconClose.classList.add("hidden");
+            if(mobileMenu.classList.contains('hidden') === false) {
+              mobileMenu.classList.add("hidden");
+              iconMenu.classList.remove("hidden");
+              iconClose.classList.add("hidden");
+            }
           });
         });
 
         document.getElementById("current-year").textContent =
           new Date().getFullYear();
-      });
-    </script>
-
-    <script>
-      const video = document.getElementById("wimbli-video");
-      const playButton = document.getElementById("custom-play-button");
-
-      playButton.addEventListener("click", () => {
-        video.play();
-        playButton.classList.add("hidden"); // Hide button when playing
-        video.setAttribute("controls", "true"); // Show native controls after play
-      });
-    </script>
-
-    <!-- Notify Me Functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // This script targets the waitlist form specifically by its new ID
-        const waitlistForm = document.getElementById("waitlist-form");
-        const feedbackDiv = document.getElementById("form-feedback"); // Get the feedback div
-
-        // Check if the form exists on the page before adding an event listener
-        if (waitlistForm) {
-          waitlistForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            const submitButton = waitlistForm.querySelector(
-              'button[type="submit"]'
-            );
-            const input = waitlistForm.querySelector("input[name='email']");
-
-            const originalButtonText = submitButton.innerHTML;
-            submitButton.innerHTML = "Submitting...";
-            submitButton.disabled = true;
-            feedbackDiv.innerHTML = ""; // Clear previous messages
-
-            const email = input.value.trim();
-
-            if (!email.includes("@")) {
-              feedbackDiv.innerHTML =
-                '<p class="text-red-600">Please enter a valid email address.</p>';
-              submitButton.innerHTML = originalButtonText;
-              submitButton.disabled = false;
-              return;
-            }
-
-            try {
-              const res = await fetch("/.netlify/functions/notify", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
-              });
-
-              if (res.ok) {
-                feedbackDiv.innerHTML =
-                  '<p class="text-green-600">✅ Thanks! You’ll be notified when Wimbli launches.</p>';
-                input.value = ""; // Clear the input field
-              } else {
-                const data = await res.json();
-                feedbackDiv.innerHTML =
-                  '<p class="text-red-600">❌ ' +
-                  (data.error || "Something went wrong.") +
-                  "</p>";
-              }
-            } catch (err) {
-              console.error(err);
-              feedbackDiv.innerHTML =
-                '<p class="text-red-600">❌ Network error. Please try again.</p>';
-            } finally {
-              submitButton.innerHTML = originalButtonText;
-              submitButton.disabled = false;
-            }
-          });
-        }
       });
     </script>
   </body>
