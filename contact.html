@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/wimbliAppIcon.png" type="image/png" />
+    <link rel="icon" href="/wimbliLogoWhite.png" type="image/png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -53,25 +53,36 @@
         -webkit-text-fill-color: transparent;
       }
       .hero-gradient {
-        background: radial-gradient(
-          ellipse 80% 50% at 50% -20%,
-          rgba(56, 189, 248, 0.15),
-          transparent
-        ),
-        #020617;
+        background:
+          radial-gradient(
+            ellipse 80% 50% at 50% -20%,
+            rgba(56, 189, 248, 0.15),
+            transparent
+          ),
+          #020617;
       }
-      
+
       /* --- ANIMATIONS --- */
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .fade-in {
         animation: fadeIn 0.8s ease-out forwards;
         opacity: 0;
       }
-      .delay-100 { animation-delay: 0.1s; }
-      .delay-200 { animation-delay: 0.2s; }
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
 
       /* Nav link underline animation */
       .nav-link {
@@ -79,7 +90,7 @@
         transition: color 0.3s ease;
       }
       .nav-link::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 0;
         height: 2px;
@@ -89,54 +100,124 @@
         background-image: linear-gradient(90deg, #a78bfa, #38bdf8);
         transition: width 0.3s ease;
       }
-      .nav-link:hover::after, .nav-link.active::after {
+      .nav-link:hover::after,
+      .nav-link.active::after {
         width: 100%;
       }
-      .nav-link:hover, .nav-link.active {
+      .nav-link:hover,
+      .nav-link.active {
         color: white;
       }
     </style>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
       gtag("config", "G-TBSKPMC0ML");
     </script>
   </head>
   <body class="bg-slate-950 text-slate-200">
     <!-- Header & Navigation -->
-    <header id="header" class="bg-slate-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <header
+      id="header"
+      class="bg-slate-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
         <a href="index.html" class="flex items-center space-x-3">
-          <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-10 w-10" />
+          <img src="/wimbliLogoWhite.png" alt="Wimbli logo" class="h-10 w-10" />
           <span class="text-2xl font-bold text-white">Wimbli</span>
         </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html#how-it-works" class="nav-link text-slate-300">How It Works</a>
+          <a href="index.html#how-it-works" class="nav-link text-slate-300"
+            >How It Works</a
+          >
           <a href="features.html" class="nav-link text-slate-300">Features</a>
           <a href="faq.html" class="nav-link text-slate-300">FAQ</a>
-          <a href="contact.html" class="nav-link text-slate-300 active">Contact</a>
-          <a href="index.html#download" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 transform hover:scale-105">
+          <a href="contact.html" class="nav-link text-slate-300 active"
+            >Contact</a
+          >
+          <a
+            href="index.html#download"
+            class="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 transform hover:scale-105"
+          >
             Download Now
           </a>
         </div>
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-slate-200 focus:outline-none">
-            <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <button
+            id="mobile-menu-button"
+            class="text-slate-200 focus:outline-none"
+          >
+            <svg
+              id="icon-menu"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              id="icon-close"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
           </button>
         </div>
       </nav>
       <div id="mobile-menu" class="hidden md:hidden bg-slate-900">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-          <a href="index.html#how-it-works" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">How It Works</a>
-          <a href="features.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Features</a>
-          <a href="faq.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-          <a href="contact.html" class="block text-white font-semibold px-3 py-2 rounded-md text-base">Contact</a>
-          <a href="index.html#download" class="mt-4 w-1/2 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition-all shadow-sm">Download</a>
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+        >
+          <a
+            href="index.html#how-it-works"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="block text-white font-semibold px-3 py-2 rounded-md text-base"
+            >Contact</a
+          >
+          <a
+            href="index.html#download"
+            class="mt-4 w-1/2 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition-all shadow-sm"
+            >Download</a
+          >
         </div>
       </div>
     </header>
@@ -145,11 +226,14 @@
       <!-- Contact Hero -->
       <section class="hero-gradient pt-32 pb-16 md:pt-40 md:pb-24">
         <div class="container mx-auto px-6 text-center">
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 fade-in delay-100">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold text-white mb-4 fade-in delay-100"
+          >
             Let's Talk
           </h1>
           <p class="text-lg text-slate-300 max-w-3xl mx-auto fade-in delay-200">
-            Have a question, feedback, or a partnership idea? We'd love to hear from you.
+            Have a question, feedback, or a partnership idea? We'd love to hear
+            from you.
           </p>
         </div>
       </section>
@@ -160,52 +244,112 @@
           <div class="grid lg:grid-cols-2 gap-16 items-start">
             <!-- Contact Info -->
             <div class="fade-in">
-              <h2 class="text-3xl font-bold text-white mb-6">Contact Information</h2>
+              <h2 class="text-3xl font-bold text-white mb-6">
+                Contact Information
+              </h2>
               <p class="text-slate-400 mb-8">
-                Fill out the form, or if you prefer, send us an email directly. We aim to respond to all inquiries within 24-48 hours.
+                Fill out the form, or if you prefer, send us an email directly.
+                We aim to respond to all inquiries within 24-48 hours.
               </p>
               <div class="space-y-6">
                 <div class="flex items-start gap-x-4">
-                  <div class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-slate-800 border border-slate-700">
-                    <svg class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                  <div
+                    class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-slate-800 border border-slate-700"
+                  >
+                    <svg
+                      class="h-6 w-6 text-blue-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="font-semibold text-white">Support Email</h3>
-                    <p class="mt-1 text-slate-400">For general inquiries and support</p>
-                    <a href="mailto:wimbliapp@gmail.com" class="mt-1 font-semibold text-blue-400 hover:text-blue-300">wimbliapp@gmail.com</a>
+                    <p class="mt-1 text-slate-400">
+                      For general inquiries and support
+                    </p>
+                    <a
+                      href="mailto:wimbliapp@gmail.com"
+                      class="mt-1 font-semibold text-blue-400 hover:text-blue-300"
+                      >wimbliapp@gmail.com</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Contact Form -->
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 fade-in delay-100">
+            <div
+              class="bg-slate-900 p-8 rounded-2xl border border-slate-800 fade-in delay-100"
+            >
               <form id="contact-form" class="space-y-6">
                 <div>
-                  <label for="full-name" class="block text-sm font-semibold leading-6 text-slate-300">Full name</label>
+                  <label
+                    for="full-name"
+                    class="block text-sm font-semibold leading-6 text-slate-300"
+                    >Full name</label
+                  >
                   <div class="mt-2.5">
-                    <input type="text" name="full-name" id="full-name" autocomplete="name" class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition">
+                    <input
+                      type="text"
+                      name="full-name"
+                      id="full-name"
+                      autocomplete="name"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition"
+                    />
                   </div>
                 </div>
                 <div>
-                  <label for="email" class="block text-sm font-semibold leading-6 text-slate-300">Email</label>
+                  <label
+                    for="email"
+                    class="block text-sm font-semibold leading-6 text-slate-300"
+                    >Email</label
+                  >
                   <div class="mt-2.5">
-                    <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      autocomplete="email"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition"
+                    />
                   </div>
                 </div>
                 <div>
-                  <label for="message" class="block text-sm font-semibold leading-6 text-slate-300">Message</label>
+                  <label
+                    for="message"
+                    class="block text-sm font-semibold leading-6 text-slate-300"
+                    >Message</label
+                  >
                   <div class="mt-2.5">
-                    <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition"></textarea>
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows="4"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 bg-slate-800 text-white shadow-sm ring-1 ring-inset ring-slate-700 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 transition"
+                    ></textarea>
                   </div>
                 </div>
                 <div class="mt-8 flex justify-end">
-                  <button type="submit" class="w-full rounded-md bg-gradient-to-r from-blue-500 to-purple-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition transform hover:scale-105">
+                  <button
+                    type="submit"
+                    class="w-full rounded-md bg-gradient-to-r from-blue-500 to-purple-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition transform hover:scale-105"
+                  >
                     Send message
                   </button>
                 </div>
               </form>
-              <div id="form-feedback" class="mt-6 text-center text-lg font-medium"></div>
+              <div
+                id="form-feedback"
+                class="mt-6 text-center text-lg font-medium"
+              ></div>
             </div>
           </div>
         </div>
@@ -217,21 +361,41 @@
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-center md:text-left mb-4 md:mb-0">
-             <div class="flex items-center space-x-3 justify-center md:justify-start mb-2">
-                <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-8 w-8" />
-                <span class="text-xl font-bold text-white">Wimbli</span>
-             </div>
+            <div
+              class="flex items-center space-x-3 justify-center md:justify-start mb-2"
+            >
+              <img
+                src="/wimbliLogoWhite.png"
+                alt="Wimbli logo"
+                class="h-8 w-8"
+              />
+              <span class="text-xl font-bold text-white">Wimbli</span>
+            </div>
             <p class="text-sm">
               &copy; <span id="current-year"></span> Wimbli. All rights
               reserved.
             </p>
           </div>
           <div class="flex items-center space-x-4">
-            <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+            <a href="faq.html" class="hover:text-white transition-colors"
+              >FAQ</a
+            >
             <span class="text-slate-600">•</span>
-            <a href="/privacy.html" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Privacy</a>
+            <a
+              href="/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Privacy</a
+            >
             <span class="text-slate-600">•</span>
-            <a href="/terms.html" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Terms</a>
+            <a
+              href="/terms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Terms</a
+            >
           </div>
         </div>
       </div>
@@ -240,15 +404,18 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('fade-in');
-            }
-          });
-        }, { threshold: 0.1 });
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
 
-        document.querySelectorAll('.fade-in').forEach(el => {
+        document.querySelectorAll(".fade-in").forEach((el) => {
           observer.observe(el);
         });
 
@@ -258,7 +425,11 @@
           if (window.scrollY > 20) {
             header.classList.add("shadow-lg", "border-b", "border-slate-800");
           } else {
-            header.classList.remove("shadow-lg", "border-b", "border-slate-800");
+            header.classList.remove(
+              "shadow-lg",
+              "border-b",
+              "border-slate-800"
+            );
           }
         });
 
@@ -275,7 +446,7 @@
 
         document.querySelectorAll("#mobile-menu a, nav a").forEach((link) => {
           link.addEventListener("click", () => {
-            if(!mobileMenu.classList.contains('hidden')) {
+            if (!mobileMenu.classList.contains("hidden")) {
               mobileMenu.classList.add("hidden");
               iconMenu.classList.remove("hidden");
               iconClose.classList.add("hidden");
@@ -283,16 +454,19 @@
           });
         });
 
-        document.getElementById("current-year").textContent = new Date().getFullYear();
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
 
         // --- Contact Form Logic ---
         const contactForm = document.getElementById("contact-form");
-        const feedbackDiv = document.getElementById("form-feedback"); 
+        const feedbackDiv = document.getElementById("form-feedback");
 
         contactForm.addEventListener("submit", async function (e) {
           e.preventDefault();
 
-          const submitButton = contactForm.querySelector('button[type="submit"]');
+          const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+          );
           const originalButtonText = submitButton.innerHTML;
           submitButton.innerHTML = "Sending...";
           submitButton.disabled = true;
@@ -304,7 +478,8 @@
           const message = formData.get("message");
 
           if (!name || !email || !message) {
-            feedbackDiv.innerHTML = '<p class="text-red-500">Please fill out all fields.</p>';
+            feedbackDiv.innerHTML =
+              '<p class="text-red-500">Please fill out all fields.</p>';
             submitButton.innerHTML = originalButtonText;
             submitButton.disabled = false;
             return;
@@ -318,15 +493,20 @@
             });
 
             if (response.ok) {
-              feedbackDiv.innerHTML = '<p class="text-green-400">✅ Thanks for your message! We will get back to you shortly.</p>';
+              feedbackDiv.innerHTML =
+                '<p class="text-green-400">✅ Thanks for your message! We will get back to you shortly.</p>';
               contactForm.reset();
             } else {
               const data = await response.json();
-              feedbackDiv.innerHTML = '<p class="text-red-500">❌ Error: ' + (data.error || "Something went wrong.") + "</p>";
+              feedbackDiv.innerHTML =
+                '<p class="text-red-500">❌ Error: ' +
+                (data.error || "Something went wrong.") +
+                "</p>";
             }
           } catch (err) {
             console.error(err);
-            feedbackDiv.innerHTML = '<p class="text-red-500">❌ Network error. Please try again.</p>';
+            feedbackDiv.innerHTML =
+              '<p class="text-red-500">❌ Network error. Please try again.</p>';
           } finally {
             submitButton.innerHTML = originalButtonText;
             submitButton.disabled = false;

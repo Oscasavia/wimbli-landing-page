@@ -25,13 +25,12 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/wimbliAppIcon.png" type="image/png" />
+    <link rel="icon" href="/wimbliLogoWhite.png" type="image/png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind Typography Plugin -->
     <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
-
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,25 +55,36 @@
         -webkit-text-fill-color: transparent;
       }
       .hero-gradient {
-        background: radial-gradient(
-          ellipse 80% 50% at 50% -20%,
-          rgba(56, 189, 248, 0.15),
-          transparent
-        ),
-        #020617;
+        background:
+          radial-gradient(
+            ellipse 80% 50% at 50% -20%,
+            rgba(56, 189, 248, 0.15),
+            transparent
+          ),
+          #020617;
       }
-      
+
       /* --- ANIMATIONS --- */
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .fade-in {
         animation: fadeIn 0.8s ease-out forwards;
         opacity: 0;
       }
-      .delay-100 { animation-delay: 0.1s; }
-      .delay-200 { animation-delay: 0.2s; }
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
 
       /* Nav link underline animation */
       .nav-link {
@@ -82,7 +92,7 @@
         transition: color 0.3s ease;
       }
       .nav-link::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 0;
         height: 2px;
@@ -92,54 +102,122 @@
         background-image: linear-gradient(90deg, #a78bfa, #38bdf8);
         transition: width 0.3s ease;
       }
-      .nav-link:hover::after, .nav-link.active::after {
+      .nav-link:hover::after,
+      .nav-link.active::after {
         width: 100%;
       }
-      .nav-link:hover, .nav-link.active {
+      .nav-link:hover,
+      .nav-link.active {
         color: white;
       }
     </style>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TBSKPMC0ML"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
       gtag("config", "G-TBSKPMC0ML");
     </script>
   </head>
   <body class="bg-slate-950 text-slate-200">
     <!-- Header & Navigation -->
-    <header id="header" class="bg-slate-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <header
+      id="header"
+      class="bg-slate-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
         <a href="index.html" class="flex items-center space-x-3">
-          <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-10 w-10" />
+          <img src="/wimbliLogoWhite.png" alt="Wimbli logo" class="h-10 w-10" />
           <span class="text-2xl font-bold text-white">Wimbli</span>
         </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html#how-it-works" class="nav-link text-slate-300">How It Works</a>
+          <a href="index.html#how-it-works" class="nav-link text-slate-300"
+            >How It Works</a
+          >
           <a href="features.html" class="nav-link text-slate-300">Features</a>
           <a href="faq.html" class="nav-link text-slate-300">FAQ</a>
           <a href="contact.html" class="nav-link text-slate-300">Contact</a>
-          <a href="index.html#download" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 transform hover:scale-105">
+          <a
+            href="index.html#download"
+            class="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 transform hover:scale-105"
+          >
             Download Now
           </a>
         </div>
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-slate-200 focus:outline-none">
-            <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <button
+            id="mobile-menu-button"
+            class="text-slate-200 focus:outline-none"
+          >
+            <svg
+              id="icon-menu"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              id="icon-close"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
           </button>
         </div>
       </nav>
       <div id="mobile-menu" class="hidden md:hidden bg-slate-900">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-          <a href="index.html#how-it-works" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">How It Works</a>
-          <a href="features.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Features</a>
-          <a href="faq.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-          <a href="contact.html" class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
-          <a href="index.html#download" class="mt-4 w-1/2 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition-all shadow-sm">Download</a>
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+        >
+          <a
+            href="index.html#how-it-works"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >How It Works</a
+          >
+          <a
+            href="features.html"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >Features</a
+          >
+          <a
+            href="faq.html"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+          <a
+            href="index.html#download"
+            class="mt-4 w-1/2 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition-all shadow-sm"
+            >Download</a
+          >
         </div>
       </div>
     </header>
@@ -148,11 +226,14 @@
       <!-- Privacy Hero -->
       <section class="hero-gradient pt-32 pb-16 md:pt-40 md:pb-24">
         <div class="container mx-auto px-6 text-center">
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 fade-in delay-100">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold text-white mb-4 fade-in delay-100"
+          >
             Privacy Policy
           </h1>
           <p class="text-lg text-slate-300 max-w-3xl mx-auto fade-in delay-200">
-            Your privacy is important to us. Here's how we collect, use, and protect your information.
+            Your privacy is important to us. Here's how we collect, use, and
+            protect your information.
           </p>
         </div>
       </section>
@@ -163,7 +244,7 @@
           <!-- This 'prose' class from Tailwind Typography handles all the styling -->
           <div class="prose prose-lg prose-invert max-w-none">
             <p class="lead">Last updated on August 2, 2025</p>
-            
+
             <h2>1. Introduction</h2>
             <p>
               Welcome to Wimbli. We are committed to protecting your privacy and
@@ -289,7 +370,8 @@
             <h2>9. Contact Us</h2>
             <p>
               If you have any questions or concerns about this Privacy Policy,
-              please contact us at <a href="mailto:wimbliapp@gmail.com">wimbliapp@gmail.com</a>.
+              please contact us at
+              <a href="mailto:wimbliapp@gmail.com">wimbliapp@gmail.com</a>.
             </p>
           </div>
         </div>
@@ -301,21 +383,37 @@
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-center md:text-left mb-4 md:mb-0">
-             <div class="flex items-center space-x-3 justify-center md:justify-start mb-2">
-                <img src="/wimbliAppIcon.png" alt="Wimbli logo" class="h-8 w-8" />
-                <span class="text-xl font-bold text-white">Wimbli</span>
-             </div>
+            <div
+              class="flex items-center space-x-3 justify-center md:justify-start mb-2"
+            >
+              <img
+                src="/wimbliLogoWhite.png"
+                alt="Wimbli logo"
+                class="h-8 w-8"
+              />
+              <span class="text-xl font-bold text-white">Wimbli</span>
+            </div>
             <p class="text-sm">
               &copy; <span id="current-year"></span> Wimbli. All rights
               reserved.
             </p>
           </div>
           <div class="flex items-center space-x-4">
-            <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+            <a href="faq.html" class="hover:text-white transition-colors"
+              >FAQ</a
+            >
             <span class="text-slate-600">•</span>
-            <a href="privacy.html" class="nav-link text-slate-300 active">Privacy</a>
+            <a href="privacy.html" class="nav-link text-slate-300 active"
+              >Privacy</a
+            >
             <span class="text-slate-600">•</span>
-            <a href="/terms.html" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Terms</a>
+            <a
+              href="/terms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Terms</a
+            >
           </div>
         </div>
       </div>
@@ -329,7 +427,11 @@
           if (window.scrollY > 20) {
             header.classList.add("shadow-lg", "border-b", "border-slate-800");
           } else {
-            header.classList.remove("shadow-lg", "border-b", "border-slate-800");
+            header.classList.remove(
+              "shadow-lg",
+              "border-b",
+              "border-slate-800"
+            );
           }
         });
 
@@ -346,7 +448,7 @@
 
         document.querySelectorAll("#mobile-menu a, nav a").forEach((link) => {
           link.addEventListener("click", () => {
-            if(!mobileMenu.classList.contains('hidden')) {
+            if (!mobileMenu.classList.contains("hidden")) {
               mobileMenu.classList.add("hidden");
               iconMenu.classList.remove("hidden");
               iconClose.classList.add("hidden");
@@ -354,7 +456,8 @@
           });
         });
 
-        document.getElementById("current-year").textContent = new Date().getFullYear();
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
       });
     </script>
   </body>
