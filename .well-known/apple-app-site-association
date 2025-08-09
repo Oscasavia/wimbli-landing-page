@@ -3,7 +3,7 @@
     "details": [
       {
         "appID": "C923GLP9Q2.com.oscasavia.wimbli",
-        "paths": [ "/event/*" ]
+        "paths": [ "/event/*", "/share/*" ]
       }
     ]
   }
